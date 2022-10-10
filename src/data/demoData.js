@@ -13,7 +13,6 @@ import {
   FiBarChart,
   FiCreditCard,
   FiStar,
-  FiShoppingCart,
 } from "react-icons/fi";
 import {
   BsKanban,
@@ -21,10 +20,10 @@ import {
   BsBoxSeam,
   BsCurrencyDollar,
   BsShield,
-  BsChatLeft,
+  BsCart,
 } from "react-icons/bs";
 import { BiColorFill } from "react-icons/bi";
-import { IoMdContacts } from "react-icons/io";
+import { IoMdContacts, IoMdChatbubbles } from "react-icons/io";
 import { RiContactsLine, RiStockLine } from "react-icons/ri";
 import { MdOutlineSupervisorAccount } from "react-icons/md";
 import { HiOutlineRefresh } from "react-icons/hi";
@@ -41,7 +40,6 @@ import product4 from "./product4.jpg";
 import product5 from "./product5.jpg";
 import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
-import product8 from "./product8.jpg";
 
 export const gridOrderImage = (props) => (
   <div>
@@ -730,7 +728,7 @@ export const recentTransactions = [
 
 export const weeklyStats = [
   {
-    icon: <FiShoppingCart />,
+    icon: <BsCart />,
     amount: "-$560",
     title: "Top Sales",
     desc: "Johnathan Doe",
@@ -746,7 +744,7 @@ export const weeklyStats = [
     pcColor: "red-600",
   },
   {
-    icon: <BsChatLeft />,
+    icon: <IoMdChatbubbles />,
     amount: "+$560",
     title: "Most Commented",
     desc: "Ample Admin",
@@ -3023,70 +3021,6 @@ export const ecomPieChartData = [
   { x: "2020", y: 18, text: "25%" },
   { x: "2021", y: 18, text: "25%" },
 ];
-
-export const stackedChartData = [
-  [
-    { x: "Jan", y: 111.1 },
-    { x: "Feb", y: 127.3 },
-    { x: "Mar", y: 143.4 },
-    { x: "Apr", y: 159.9 },
-    { x: "May", y: 159.9 },
-    { x: "Jun", y: 159.9 },
-    { x: "July", y: 159.9 },
-  ],
-  [
-    { x: "Jan", y: 111.1 },
-    { x: "Feb", y: 127.3 },
-    { x: "Mar", y: 143.4 },
-    { x: "Apr", y: 159.9 },
-    { x: "May", y: 159.9 },
-    { x: "Jun", y: 159.9 },
-    { x: "July", y: 159.9 },
-  ],
-];
-
-export const stackedCustomSeries = [
-  {
-    dataSource: stackedChartData[0],
-    xName: "x",
-    yName: "y",
-    name: "Budget",
-    type: "StackingColumn",
-    background: "blue",
-  },
-
-  {
-    dataSource: stackedChartData[1],
-    xName: "x",
-    yName: "y",
-    name: "Expense",
-    type: "StackingColumn",
-    background: "red",
-  },
-];
-
-export const stackedPrimaryXAxis = {
-  majorGridLines: { width: 0 },
-  minorGridLines: { width: 0 },
-  majorTickLines: { width: 0 },
-  minorTickLines: { width: 0 },
-  interval: 1,
-  lineStyle: { width: 0 },
-  labelIntersectAction: "Rotate45",
-  valueType: "Category",
-};
-
-export const stackedPrimaryYAxis = {
-  lineStyle: { width: 0 },
-  minimum: 100,
-  maximum: 400,
-  interval: 100,
-  majorTickLines: { width: 0 },
-  majorGridLines: { width: 1 },
-  minorGridLines: { width: 1 },
-  minorTickLines: { width: 0 },
-  labelFormat: "{value}",
-};
 
 export const kanbanData = [
   {
@@ -5730,12 +5664,4 @@ export const financialChartData = [
     close: 158.67,
     volume: 27939544,
   },
-];
-export const PyramidData = [
-  { x: "Sweet Treats", y: 120, text: "120 cal" },
-  { x: "Milk, Youghnut, Cheese", y: 435, text: "435 cal" },
-  { x: "Vegetables", y: 470, text: "470 cal" },
-  { x: "Meat, Poultry, Fish", y: 475, text: "475 cal" },
-  { x: "Fruits", y: 520, text: "520 cal" },
-  { x: "Bread, Rice, Pasta", y: 930, text: "930 cal" },
 ];
