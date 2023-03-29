@@ -9,7 +9,8 @@ import { links } from "../data/demoData";
 import { useStateContext } from "../contexts/ContextProvider";
 
 const Sidebar = () => {
-  const { activeMenu, setActiveMenu, screenSize } = useStateContext();
+  const { currentColor, activeMenu, setActiveMenu, screenSize } =
+    useStateContext();
 
   const handleClosingSidebar = () => {
     if (activeMenu === true && screenSize <= 900) {
@@ -37,6 +38,7 @@ const Sidebar = () => {
                 onClick={() => {
                   setActiveMenu((prevActiveMenu) => !prevActiveMenu);
                 }}
+                style={{ color: currentColor }}
                 className="text-xl rounded-full p-3 hover:bg-light-gray mt-4 block md:hidden"
               >
                 <MdOutlineCancel />
@@ -52,6 +54,9 @@ const Sidebar = () => {
                     to={`/${link.name}`}
                     key={link.name}
                     onClick={handleClosingSidebar}
+                    style={({ isActive }) => ({
+                      backgroundColor: isActive ? currentColor : "",
+                    })}
                     className={({ isActive }) =>
                       isActive ? activeLink : notActiveLink
                     }
