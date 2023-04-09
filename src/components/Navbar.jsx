@@ -36,6 +36,7 @@ const Navbar = () => {
     handleClick,
     screenSize,
     setScreenSize,
+    currentColor,
   } = useStateContext();
 
   useEffect(() => {
@@ -62,7 +63,7 @@ const Navbar = () => {
         func={() => {
           setActiveMenu((prevActiveMenu) => !prevActiveMenu);
         }}
-        color="blue"
+        color={currentColor}
         icon={<CgMenu />}
       />
       <div className="flex">
@@ -71,7 +72,7 @@ const Navbar = () => {
           func={() => {
             setActiveMenu(() => handleClick("cart"));
           }}
-          color="blue"
+          color={currentColor}
           icon={<BsCart />}
         />
         <NavButton
@@ -80,7 +81,7 @@ const Navbar = () => {
           func={() => {
             setActiveMenu(() => handleClick("chat"));
           }}
-          color="blue"
+          color={currentColor}
           icon={<IoMdChatbubbles />}
         />
         <NavButton
@@ -89,7 +90,7 @@ const Navbar = () => {
           func={() => {
             setActiveMenu(() => handleClick("notification"));
           }}
-          color="blue"
+          color={currentColor}
           icon={<IoMdNotificationsOutline />}
         />
         <TooltipComponent content="Profile" position="BottomCenter">
