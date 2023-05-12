@@ -33,6 +33,10 @@ export const ContextProvider = ({ children }) => {
     setIsClicked({ ...initialState, [clicked]: true });
   };
 
+  const handleClose = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: false });
+  };
+
   return (
     <StateContext.Provider
       value={{
@@ -41,6 +45,7 @@ export const ContextProvider = ({ children }) => {
         isClicked,
         setIsClicked,
         handleClick,
+        handleClose,
         screenSize,
         setScreenSize,
         currentColor,

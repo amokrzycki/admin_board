@@ -39,7 +39,7 @@ const App = () => {
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
-            <TooltipComponent position="top" content="Settings">
+            <TooltipComponent position="TopCenter" content="Settings">
               <button
                 type="button"
                 onClick={() => setThemeSettings(true)}
@@ -91,6 +91,7 @@ const App = () => {
                 <Route path="/color-mapping" element={<ColorMapping />} />
               </Routes>
             </div>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
