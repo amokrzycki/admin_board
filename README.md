@@ -1,4 +1,4 @@
-# App is hosted [here](https://sajson.github.io/admin_board) 😉
+# App is hosted [here](https://amokrzycki.github.io/admin_board) 😉
 
 ## Available Scripts
 
